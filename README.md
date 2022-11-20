@@ -1,23 +1,39 @@
 
 a)
 EBNF:
+
 startup → Beginner { statement } End
+
 statement → ifsmt | loop | express
+
 ifsmt → what'(' booLean ')' '{' statement '}' { statement } 
+
 booLean → identifier (<|>|<=|>=|==|!) integer
+
 loop → loop( booLean ) '{' statement '}' { statement }
-express → terminol {(+ | *) terminol} 
+
+express → terminol {(+ | *) terminol } 
+
 terminol → comp {(- | / ) comp }
+
 comp → equal_to {(<|>|<=|>=|==) equal_to }
+
 equal_to → mod{(=|!=) mod }
+
 mod → factor {(%|;) factor }
+
 factor → id | int_constant | num identify | ( express ) | s_colon
 
 glossary → new_Char id = value 
+
 new_Char → new_Char
+
 omitBlnk → extract
+
 extract → extract
+
 lex → lex( omitBlnk ) { new_Char & extract | error_0 }
+
 error_0 → exit
 
 b)
