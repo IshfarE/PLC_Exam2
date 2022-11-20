@@ -87,20 +87,29 @@ EQUAL_V (equal) - '=='
 
 NOTEQUAL - '!='
 
-
 c)
 Non-terminal		Input Symbol
 		
 Program     --> Program → Statement, Program → Subroutine
+
 Statement   --> Statement → Assign, Statement → process
+
 Subroutine  --> Subroutine → id (arguments), Subroutine → Statement
+
 id --> id   --> (;;; any alphanumeric token)
-Assign      --> Assign → id = Expression                   
+
+Assign      --> Assign → id = Expression   
+
 Expression  --> Expression → car, cdr
+
 car         --> car → id, car → sub_call, car → ( expression )
+
 cdr         --> cdr → ∊, cdr → operation expression
+
 Operation   --> Operation → (+ | *) , (- | / | % ) , = | Operation →  (- | / | % ) , = | Operation → =
+
 Parameters  --> parameters → expression, arg_cdr
+
 arg         --> arg → ∊, arg → parameters
 
 
