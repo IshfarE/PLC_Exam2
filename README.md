@@ -1,5 +1,6 @@
 
 a)
+
 EBNF:
 
 startup → Beginner { statement } End
@@ -37,31 +38,55 @@ lex → lex( omitBlnk ) { new_Char & extract | error_0 }
 error_0 → exit
 
 b)
+
 Production rules:
+
 E --> E + T
+
 E --> E - T
+
 E --> T
+
 T --> T * F
+
 T --> T / F
+
 T --> T % F
+
 F --> (E)
 
+
 Operators:
+
 ADDITION - '+'
+
 SUBTRACT - '-'
+
 MULTIPLY - '*' (*)
+
 DIVIDE - '/'
+
 MODULUS - '%'
+
 STARTPAR (left parenthese) - '('
+
 ENDPAR (right parenthese) - ')'
 
+
 Comparison:
+
 SMALLER (less than) - '<'
+
 LARGER (greater than) - '>'
+
 SMALLERQ (less than or equal) - '<='
+
 LARGERQ (greater than or equal) - '>='
+
 EQUAL_V (equal) - '=='
+
 NOTEQUAL - '!='
+
 
 c)
 Non-terminal		Input Symbol
