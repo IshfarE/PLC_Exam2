@@ -76,8 +76,10 @@ g)
 Fully-functional programs are 
 - errorfree.in
 - errorfree2.in
+
 Lexical errors are found in 
 - lexerror.in
+
 Syntax errors are found in 
 - synerror.in
 
@@ -88,6 +90,7 @@ h)
 Samples without failure are
 - hGood1.in
 - hGood2.in
+
 Samples with failure to pass test are
 - hError1.in
 - hError2.in
