@@ -62,7 +62,7 @@ ADDITION - '+'
 
 SUBTRACT - '-'
 
-MULTIPLY - '*' (*)
+MULTIPLY - '*' 
 
 DIVIDE - '/'
 
