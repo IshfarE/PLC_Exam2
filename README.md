@@ -72,10 +72,22 @@ Found on lex.h
 f)
 Found on syn.h
 
-
+g)
+Fully-functional programs are 
+- errorfree.in
+- errorfree2.in
+Lexical errors are found in 
+- lexerror.in
+Syntax errors are found in 
+- synerror.in
 
 h)
 ![Part h 1](https://user-images.githubusercontent.com/118640495/202877310-8f882b45-ae25-42ff-910d-1a00c5fcb744.png)
 ![Part h 2](https://user-images.githubusercontent.com/118640495/202877313-43e618d6-50e0-4f23-b39c-ddc21ec6751c.png)
 
-
+Samples without failure are
+- hGood1.in
+- hGood2.in
+Samples with failure to pass test are
+- hError1.in
+- hError2.in
