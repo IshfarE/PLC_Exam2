@@ -23,9 +23,9 @@ error_0 → exit
 b)
 Production rules:
 E --> E + T
-E --> E * T
+E --> E - T
 E --> T
-T --> T - F
+T --> T * F
 T --> T / F
 T --> T % F
 F --> (E)
