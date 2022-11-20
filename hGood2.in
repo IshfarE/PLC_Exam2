@@ -1,0 +1,12 @@
+@
+regirock=3r;
+^
+
+/*Code trace:
+@                        Target: '@', Token: Beginner, Lexeme: @
+@ regirock               Target: 'regirock', Token: IDENTIFY, Lexeme: regirock
+@ regirock =             Target: '=', Token: ASSGNMNT, Lexeme: =
+@ regirock = 3r           Target: '3r', Token: INTEGER, Lexeme: 3r
+@ regirock = 3r ;         Target: ';', Token: S_COLON, Lexeme = ;
+@ regirock = 3r ; ^       Target: '^', Token: Finisher. Lexene: ^
+*/

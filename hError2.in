@@ -1,0 +1,16 @@
+@
+regirock = z;
+^
+
+/*Code trace:
+@                        Target: '@', Token: Beginner, Lexeme: @
+@ regirock               Target: 'regirock', Token: IDENTIFY, Lexeme: regirock
+@ regirock =             Target: '=', Token: ASSGNMNT, Lexeme: =
+@ regirock = z           Target: 'z', Token: INTEGER, Lexeme: z (error, stop program)
+
+Fail area: regirock = z  ('z' is the problem as it is not an integer)
+Pass area: @ ('@' indicates start of program), ; (';' indicates end of line when not a loop or boolean), ^ ('^' indicates end of program), all used correctly
+*/
+
+
+

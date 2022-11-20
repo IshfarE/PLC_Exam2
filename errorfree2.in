@@ -1,0 +1,17 @@
+@
+shuckle=230;
+circ(shuckle<1000)
+{
+  shuckle*4;
+}
+
+shedinja=1;
+circ(shedinja<=10)
+{
+  shedinja+3;
+}
+
+buzzwole=5000r;
+buzzwole-shedinja;
+
+^

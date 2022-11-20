@@ -1,0 +1,17 @@
+$    //Illegal token can't be identified
+shuckleguru=230;     //Exceeds maximum length of variable name (which is 8)
+wha(shuckle<1000)    //Missing character for if statement (error due to token not registered)
+{
+  shuckle*4;
+}
+
+shed=1;             //Variable name length below minimum acceptable (which is 6)
+circ(shedinja<=10)
+{
+  shedinja+3;
+}
+
+2buzzwole=5000r;    //Spelling error (variable name can only be of alphabets)
+buzzwole-shedinja;
+
+^

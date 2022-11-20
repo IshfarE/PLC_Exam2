@@ -1,0 +1,12 @@
+@
+shedinja=1;
+^
+
+/*Code trace:
+@                        Target: '@', Token: Beginner, Lexeme: @
+@ shedinja               Target: 'shedinja', Token: IDENTIFY, Lexeme: shedinja
+@ shedinja =             Target: '=', Token: ASSGNMNT, Lexeme: =
+@ shedinja = 1           Target: '1', Token: INTEGER, Lexeme: 1
+@ shedinja = 1 ;         Target: ';', Token: S_COLON, Lexeme = ;
+@ shedinja = 1 ; ^       Target: '^', Token: Finisher. Lexene: ^
+*/

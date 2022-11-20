@@ -1,0 +1,16 @@
+@
+shedinja=r;
+^
+
+/*Code trace:
+@                        Target: '@', Token: Beginner, Lexeme: @
+@ shedinja               Target: 'shedinja', Token: IDENTIFY, Lexeme: shedinja
+@ shedinja =             Target: '=', Token: ASSGNMNT, Lexeme: =
+@ shedinja = r           Target: 'r', Token: INTEGER, Lexeme: r (error, stop program)
+
+Fail area: shedinja = r  ('r' is the problem as it is not an integer)
+Pass area: @ ('@' indicates start of program), ; (';' indicates end of line when not a loop or boolean), ^ ('^' indicates end of program), all used correctly
+*/
+
+
+
