@@ -114,7 +114,8 @@ arg         --> arg → ∊, arg → parameters
 
 
 d)
-This is LL(1) grammar, which makes the grammar unambiguous.
+Everything passes pairwise disjoint, with no left recursion (nonterminal doesn’t repeat same nonterminal, all go to different nonterminals (all with an endpoint, and therefore avoid unnecessary recursion).
+
 
 e)
 Found on lex.h
