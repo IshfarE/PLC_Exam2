@@ -88,32 +88,65 @@ EQUAL_V (equal) - '=='
 NOTEQUAL - '!='
 
 c)
-Non-terminal		Input Symbol
-		
-Program     --> Program → Statement, Program → Subroutine
+Must pass pairwise disjoint test
 
-Statement   --> Statement → Assign, Statement → process
+startup → Beginner { statement } End
 
-Subroutine  --> Subroutine → id (arguments), Subroutine → Statement
+First( Startup ) = Beginner { ifsmt | loop | express }
 
-id --> id   --> (;;; any alphanumeric token)
+= beginner { what | circ | identifier | integer | num identify | ( expr ) | s_colon }
+All values different (pass pairwise disjoint test)
+loop → loop( booLean ) '{' statement '}' { statement }
 
-Assign      --> Assign → id = Expression   
+First(Loop)=circ
 
-Expression  --> Expression → car, cdr
+Pass
 
-car         --> car → id, car → sub_call, car → ( expression )
+ifsmt → what'(' booLean ')' '{' statement '}' { statement }
 
-cdr         --> cdr → ∊, cdr → operation expression
+First(ifsmt)=what
 
-Operation   --> Operation → (+ | *) , (- | / | % ) , = | Operation →  (- | / | % ) , = | Operation → =
+Pass
 
-Parameters  --> parameters → expression, arg_cdr
+booLean → identifier (<|>|<=|>=|==|!) integer
 
-arg         --> arg → ∊, arg → parameters
+First(booLean)=identifier
+
+Pass
+
+express → terminol { (+ | *) terminol }
+
+First(express) = terminol = identifes | integer | num identify | ( < | s_colon 
+
+Pass
+
+comp → equal_to { (<|>|<=|>=|==) equal_to }
+
+First(comp)= equal_to = identifes | integer | num identify | ( | s_colon
+
+Pass
+
+equal_to → mod { (=|!=) mod }
+
+First(equal_to)= mod = identifes | integer | num identify | ( | s_colon
+
+Pass
+
+mod → factor { (%|;) factor }
+
+First(mod)= factor  = identifes | integer | num identify | (| s_colon
+
+Pass
+
+factor  → identifes | integer | num identify idenfies s_colon | ( express) | s_colon
+
+First(factor)= factor = identifes | integer | num identify | ( | s_colon
+
+Pass
 
 
 d)
+
 Everything passes pairwise disjoint, with no left recursion (nonterminal doesn’t repeat same nonterminal, all go to different nonterminals (all with an endpoint, and therefore avoid unnecessary recursion).
 
 
