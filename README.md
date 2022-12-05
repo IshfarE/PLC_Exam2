@@ -144,10 +144,11 @@ First(factor)= factor = identifes | integer | num identify | ( | s_colon
 
 Pass
 
+This confirms that there is no left-hand recusion.
 
 d)
 
-Everything passes pairwise disjoint, with no left recursion (nonterminal doesn’t repeat same nonterminal, all go to different nonterminals (all with an endpoint, and therefore avoid unnecessary recursion).
+Everything passes pairwise disjoint, with no left recursion (nonterminal doesn’t repeat same nonterminal, all go to different nonterminals (all with an endpoint, and therefore avoid unnecessary recursion). This means that the grammar is completely unambiguous.
 
 
 e)
