@@ -3,7 +3,7 @@ a)
 
 EBNF:
 
-startup → Beginner { statement } End
+startup → beginner { statement } finisher
 
 statement → if_stmt | loop | express
 
