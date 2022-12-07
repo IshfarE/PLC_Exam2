@@ -5,9 +5,9 @@ EBNF:
 
 startup → Beginner { statement } End
 
-statement → ifsmt | loop | express
+statement → if_stmt | loop | express
 
-ifsmt → what'(' booLean ')' '{' statement '}' { statement } 
+if_stmt → what'(' booLean ')' '{' statement '}' { statement } 
 
 booLean → identifier (<|>|<=|>=|==|!) integer
 
