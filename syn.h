@@ -4,7 +4,7 @@ void startup(void);
 void express(void);
 void terminol(void);
 void factor(void);
-void ifsmt(void);
+void if_stmt(void);
 void statement(void);
 void loop(void);
 void booLean(void);
@@ -68,14 +68,14 @@ void express(void)  //<express> ->  <terminol> {(+ | *) <terminol>}
 
 void terminol(void) // <terminol> -> <comp> {(- | / ) <comp>}
 {
-	printf("Enter <term>\n"); 
+	printf("Enter <terminol>\n"); 
 	comp(); // Parse the first comp 
 	while (followTK == SUBTRACT || followTK == DIVIDE ) //parse next factor while next token is '-' or '/'
   {
     lex();
 		comp();
 	}
-	printf("Exit <term>\n");
+	printf("Exit <terminol>\n");
 }
 
 void comp(void) // <comp>-> <equal_to> {(<|>|<=|>=|==) <equal_to>}
@@ -100,7 +100,7 @@ printf("Enter <equal_to>\n");
     lex();
 	  mod();
 	}
-	printf("Exit <equality>\n");  
+	printf("Exit <equal_to>\n");  
 }
 
 void mod(void) //<mod>-> <factor> {(%|;)<factor>}
@@ -165,9 +165,9 @@ void factor(void) // <factor> -> id | int_constant | num identify | ( <express> 
 	printf("Exit <factor>\n");  
 }
 
-void ifsmt(void) //<ifsmt>-> con'('<booLean>')''{'<statement'}' {<statement} 
+void if_stmt(void) //<if_stmt>-> con'('<booLean>')''{'<statement'}' {<statement} 
 { 
-   printf("Enter <ifsmt>\n");
+   printf("Enter <if_stmt>\n");
 	if (followTK == STARTPAR ) 
   {
     lex();     //lex();
@@ -208,14 +208,14 @@ void ifsmt(void) //<ifsmt>-> con'('<booLean>')''{'<statement'}' {<statement}
   } 
 } 
 
-void statement(void) // <statement>-> <ifsmt> | <loop> | <express>   
+void statement(void) // <statement>-> <if_stmt> | <loop> | <express>   
 {
      printf("Enter <statement>\n");
     // lex();
     if(followTK==IF_STMT)
     {
       lex();
-      ifsmt();
+      if_stmt();
     }
     else if(followTK == CIRCUIT)
     {
