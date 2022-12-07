@@ -90,7 +90,7 @@ NOTEQUAL - '!='
 c)
 Must pass pairwise disjoint test
 
-startup → Beginner { statement } End
+startup → Beginner { statement } Finisher
 
 First( Startup ) = Beginner { ifsmt | loop | express }
 
